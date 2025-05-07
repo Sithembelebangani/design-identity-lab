@@ -1,11 +1,16 @@
 
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Code, Database, BarChart2, Cloud, MessageSquare, Users } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js',
-    'Node.js', 'Tailwind CSS', 'UI/UX Design', 'Figma', 'Git'
+    { name: 'Web Development', icon: <Code className="w-4 h-4 mr-1" /> },
+    { name: 'SQL', icon: <Database className="w-4 h-4 mr-1" /> },
+    { name: 'Analysis', icon: <BarChart2 className="w-4 h-4 mr-1" /> },
+    { name: 'Cloud Computing', icon: <Cloud className="w-4 h-4 mr-1" /> },
+    { name: 'Communication', icon: <MessageSquare className="w-4 h-4 mr-1" /> },
+    { name: 'Leadership', icon: <Users className="w-4 h-4 mr-1" /> }
   ];
 
   return (
@@ -44,8 +49,12 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">My Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <Badge key={skill} className="bg-portfolio-accent hover:bg-portfolio-blue">
-                    {skill}
+                  <Badge 
+                    key={skill.name} 
+                    className="bg-portfolio-accent hover:bg-portfolio-blue py-2 px-3 flex items-center"
+                  >
+                    {skill.icon}
+                    {skill.name}
                   </Badge>
                 ))}
               </div>
