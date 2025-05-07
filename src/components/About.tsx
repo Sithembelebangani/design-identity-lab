@@ -37,13 +37,11 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">Who I Am</h3>
               <p className="text-portfolio-lightBlue mb-6">
-                I'm a passionate web developer with 5 years of experience creating modern, responsive websites and applications. 
-                My goal is to build digital products that are not only visually appealing but also provide an exceptional user experience.
+                My name is Sithembele Bangani, I have a diploma in Business Application and looking forward to engage with an upgraded technologies to enhance my skills and knowledge.
               </p>
               
               <p className="text-portfolio-lightBlue mb-8">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, 
-                or sharing my knowledge through writing technical articles and mentoring new developers.
+                I am currently doing learnership at Capaciti as Cloud Associate and I can assure that I have gained lot experiences in technical side as well as personal side. I am now ready to take on or kick start my career.
               </p>
               
               <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">My Skills</h3>
