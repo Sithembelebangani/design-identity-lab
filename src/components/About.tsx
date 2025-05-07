@@ -1,0 +1,53 @@
+
+import { Badge } from '@/components/ui/badge';
+
+const About = () => {
+  const skills = [
+    'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js',
+    'Node.js', 'Tailwind CSS', 'UI/UX Design', 'Figma', 'Git'
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="opacity-0 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-portfolio-blue mb-16">
+            About Me
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="bg-gray-200 rounded-lg overflow-hidden h-96 flex items-center justify-center">
+                <p className="text-lg text-gray-500">Your Photo Here</p>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">Who I Am</h3>
+              <p className="text-portfolio-lightBlue mb-6">
+                I'm a passionate web developer with 5 years of experience creating modern, responsive websites and applications. 
+                My goal is to build digital products that are not only visually appealing but also provide an exceptional user experience.
+              </p>
+              
+              <p className="text-portfolio-lightBlue mb-8">
+                When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, 
+                or sharing my knowledge through writing technical articles and mentoring new developers.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">My Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <Badge key={skill} className="bg-portfolio-accent hover:bg-portfolio-blue">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
