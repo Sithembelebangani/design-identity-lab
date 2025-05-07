@@ -1,5 +1,6 @@
 
 import { Badge } from '@/components/ui/badge';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const About = () => {
   const skills = [
@@ -16,9 +17,15 @@ const About = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="bg-gray-200 rounded-lg overflow-hidden h-96 flex items-center justify-center">
-                <p className="text-lg text-gray-500">Your Photo Here</p>
+            <div className="bg-gray-200 rounded-lg overflow-hidden h-96 flex items-center justify-center">
+              <div className="w-full h-full">
+                <AspectRatio ratio={3/4}>
+                  <img 
+                    src="/lovable-uploads/4b8f6aa5-0a51-4d5e-9034-917ea5380361.png" 
+                    alt="Profile picture" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
               </div>
             </div>
             
