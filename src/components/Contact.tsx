@@ -50,21 +50,21 @@ const Contact = () => {
                   <Mail className="text-portfolio-accent" />
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Email</h4>
-                    <p className="text-portfolio-blue">your.email@example.com</p>
+                    <p className="text-portfolio-blue">sithembele.banga@capaciti.az.co</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="text-portfolio-accent" />
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Phone</h4>
-                    <p className="text-portfolio-blue">+1 (123) 456-7890</p>
+                    <p className="text-portfolio-blue">0734382698</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <MapPin className="text-portfolio-accent" />
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Location</h4>
-                    <p className="text-portfolio-blue">City, Country</p>
+                    <p className="text-portfolio-blue">Saltrive Cape Town, South Africa</p>
                   </div>
                 </div>
               </div>
