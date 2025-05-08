@@ -10,18 +10,26 @@ export interface ProjectProps {
   imageUrl: string;
   liveUrl?: string;
   githubUrl?: string;
+  heading?: string;
 }
 
-const ProjectCard = ({ title, description, tags, imageUrl, liveUrl, githubUrl }: ProjectProps) => {
+const ProjectCard = ({ title, description, tags, imageUrl, liveUrl, githubUrl, heading }: ProjectProps) => {
   return (
     <Card className="overflow-hidden border border-gray-200 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="aspect-video relative overflow-hidden bg-gray-100">
         {imageUrl ? (
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="object-cover w-full h-full"
-          />
+          <div className="relative w-full h-full">
+            <img 
+              src={imageUrl} 
+              alt={title} 
+              className="object-cover w-full h-full"
+            />
+            {heading && (
+              <div className="absolute top-0 left-0 right-0 bg-portfolio-blue bg-opacity-75 text-white p-2 text-center">
+                <h4 className="font-bold">{heading}</h4>
+              </div>
+            )}
+          </div>
         ) : (
           <div className="flex items-center justify-center h-full bg-gray-200">
             <p className="text-gray-500">Project Image</p>
