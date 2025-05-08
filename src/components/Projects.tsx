@@ -25,7 +25,7 @@ const Projects = () => {
       title: "Task Management App",
       description: "A productivity app that helps users organize tasks with drag-and-drop functionality and smart priorities.",
       tags: ["React", "TypeScript", "Firebase"],
-      imageUrl: "/lovable-uploads/photo-1519389950473-47ba0277781c.jpeg",
+      imageUrl: "/lovable-uploads/98b426d6-0600-4c33-afce-c118244687d2.png",
       heading: "Code Creator",
       liveUrl: "#",
       githubUrl: "#"
