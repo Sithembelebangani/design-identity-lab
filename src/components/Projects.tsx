@@ -17,7 +17,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A modern portfolio website with smooth animations and responsive design for showcasing creative work.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "",
+      imageUrl: "/lovable-uploads/4f46a399-12a8-4a4c-ba54-970eb9a4facf.png",
       liveUrl: "#",
       githubUrl: "#"
     },
