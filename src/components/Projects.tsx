@@ -15,8 +15,8 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      description: "A modern portfolio website with smooth animations and responsive design for showcasing creative work.",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
+      description: "A comprehensive showcase for a Business Analyst and Cloud Associate professional with expertise in creating cloud storage buckets, containers, and differentiating between public, private, and hybrid cloud architectures. Features interactive demonstrations of business applications skills backed by a formal diploma in Business Applications.",
+      tags: ["React", "Tailwind CSS", "Cloud Services"],
       imageUrl: "/lovable-uploads/4f46a399-12a8-4a4c-ba54-970eb9a4facf.png",
       liveUrl: "#",
       githubUrl: "#"
