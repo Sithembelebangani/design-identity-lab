@@ -20,10 +20,12 @@ const About = () => {
       style={{
         backgroundImage: 'url("/lovable-uploads/a7770f64-f1e2-4a36-9169-ef3a03934b41.png")',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
       }}
     >
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
