@@ -13,21 +13,29 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-white to-gray-100 pt-16 px-4"
+      className="min-h-screen flex flex-col justify-center items-center px-4 relative"
+      style={{
+        backgroundImage: 'url("/lovable-uploads/e99b3c9b-9711-4b13-b646-a87ea4899006.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      <div className="container mx-auto max-w-4xl text-center opacity-0 animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold text-portfolio-blue mb-6">
-          Hello, I'm <span className="text-portfolio-accent">Your Name</span>
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+      
+      <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow">
+          Hello, I'm <span className="text-blue-400">Sithembele Bangani</span>
         </h1>
-        <p className="text-xl md:text-2xl text-portfolio-lightBlue mb-8 max-w-2xl mx-auto">
-          I'm a creative developer crafting beautiful digital experiences with attention to detail.
+        <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
+          I'm a Business Analyst & Cloud Associate creating modern digital solutions.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
           <Button 
             onClick={() => scrollToSection('projects')}
             size="lg"
-            className="bg-portfolio-blue hover:bg-portfolio-accent text-white"
+            className="bg-blue-600 hover:bg-blue-700 text-white"
           >
             View My Work
           </Button>
@@ -35,15 +43,15 @@ const Hero = () => {
             onClick={() => scrollToSection('contact')}
             size="lg"
             variant="outline"
-            className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
+            className="border-white text-white hover:bg-white/10"
           >
             Contact Me
           </Button>
         </div>
       </div>
       
-      <div className="absolute bottom-8 animate-bounce cursor-pointer" onClick={() => scrollToSection('about')}>
-        <ArrowDown size={32} className="text-portfolio-accent" />
+      <div className="absolute bottom-8 animate-bounce cursor-pointer z-10" onClick={() => scrollToSection('about')}>
+        <ArrowDown size={32} className="text-white" />
       </div>
     </section>
   );
