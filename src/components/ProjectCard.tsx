@@ -2,6 +2,7 @@
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
+import React from 'react';
 
 export interface ProjectProps {
   title: string;
@@ -11,9 +12,19 @@ export interface ProjectProps {
   liveUrl?: string;
   githubUrl?: string;
   heading?: string;
+  cloudContent?: boolean;
 }
 
-const ProjectCard = ({ title, description, tags, imageUrl, liveUrl, githubUrl, heading }: ProjectProps) => {
+const ProjectCard = ({ 
+  title, 
+  description, 
+  tags, 
+  imageUrl, 
+  liveUrl, 
+  githubUrl, 
+  heading,
+  children
+}: ProjectProps & { children?: React.ReactNode }) => {
   return (
     <Card className="overflow-hidden border border-gray-200 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="aspect-video relative overflow-hidden bg-gray-100">
@@ -53,6 +64,8 @@ const ProjectCard = ({ title, description, tags, imageUrl, liveUrl, githubUrl, h
             </span>
           ))}
         </div>
+        
+        {children}
       </CardContent>
       
       <CardFooter className="flex gap-4 pt-2">
