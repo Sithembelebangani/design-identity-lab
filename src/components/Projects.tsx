@@ -9,7 +9,7 @@ const Projects = () => {
       title: "E-commerce Website",
       description: "A fully responsive e-commerce platform with cart functionality, product filtering, and user authentication.",
       tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      imageUrl: "",
+      imageUrl: "/lovable-uploads/4bafd889-2e21-4caf-9152-baeb3768caab.png",
       liveUrl: "#",
       githubUrl: "#"
     },
