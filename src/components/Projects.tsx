@@ -34,7 +34,7 @@ const Projects = () => {
       title: "Weather Dashboard",
       description: "An interactive weather dashboard that displays forecast data with beautiful visualizations and location search.",
       tags: ["React", "API Integration", "Chart.js"],
-      imageUrl: "",
+      imageUrl: "/lovable-uploads/e5c74fb6-c867-4136-b4c7-cc55e08f8a4e.png",
       liveUrl: "#",
       githubUrl: "#"
     },
@@ -42,7 +42,7 @@ const Projects = () => {
       title: "Recipe Finder",
       description: "A web app that helps users discover recipes based on ingredients they already have in their kitchen.",
       tags: ["JavaScript", "API Integration", "CSS Grid"],
-      imageUrl: "",
+      imageUrl: "/lovable-uploads/e5c74fb6-c867-4136-b4c7-cc55e08f8a4e.png",
       liveUrl: "#",
       githubUrl: "#"
     },
@@ -50,7 +50,7 @@ const Projects = () => {
       title: "Social Media Dashboard",
       description: "A comprehensive dashboard for social media analytics with customizable widgets and data visualization.",
       tags: ["React", "Redux", "D3.js"],
-      imageUrl: "",
+      imageUrl: "/lovable-uploads/e5c74fb6-c867-4136-b4c7-cc55e08f8a4e.png",
       liveUrl: "#",
       githubUrl: "#"
     }
