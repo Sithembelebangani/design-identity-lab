@@ -21,11 +21,11 @@ const projectsData: ProjectProps[] = [
   },
   {
     title: "Task Management App",
-    description: "A productivity app that helps users organize tasks with drag-and-drop functionality and smart priorities.",
+    description: "This management app is designed to enhance group collaboration and performance tracking by organizing tasks into three clear stages: \"Not Started,\" \"In Progress,\" and \"Complete.\" Each member's progress is monitored through these steps, making it easy for the team to stay aligned and productive. The app also features visual graphs that display overall and individual progress, offering a clear overview of how the group is advancing toward its goals. Additionally, it includes a built-in communication tool that allows the group leader to contact members directly via email through a dedicated button, streamlining coordination and updates.",
     tags: ["React", "TypeScript", "Firebase"],
     imageUrl: "/lovable-uploads/98b426d6-0600-4c33-afce-c118244687d2.png",
     heading: "Code Creator",
-    liveUrl: "#",
+    liveUrl: "https://www.appsheet.com/start/a4cf12a8-ae60-48b8-b3be-6e40de2053a9?platform=desktop#appName=CollaboratesApp-509564924&vss=H4sIAAAAAAAAA6WOMQ7CMBAE_7K1X-AWUSAEDRENpjDxWbKS2FHsAJHlv3MJIOqI8uY0u5txd_Q4JV03kJf8u_Y0QSIrVFNPClJhE3waQqsgFI66e8NKxyYqFJSr-MqJImRe4co_egWcIZ-cdTTMQbPGAR-J37PCYBFQBLox6VtLy04WSmFmQz1GMmcesbY87vz22WtvDsFwntVtpPICy9uR0FYBAAA=&view=Tasks",
     githubUrl: "#"
   },
   {
