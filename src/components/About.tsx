@@ -1,6 +1,5 @@
 
 import { Badge } from '@/components/ui/badge';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Code, Database, BarChart2, Cloud, MessageSquare, Users } from 'lucide-react';
 
 const About = () => {
@@ -32,19 +31,7 @@ const About = () => {
             About Me
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden h-96 flex items-center justify-center border border-white/20">
-              <div className="w-full h-full">
-                <AspectRatio ratio={3/4}>
-                  <img 
-                    src="/lovable-uploads/4b8f6aa5-0a51-4d5e-9034-917ea5380361.png" 
-                    alt="Profile picture" 
-                    className="object-cover w-full h-full"
-                  />
-                </AspectRatio>
-              </div>
-            </div>
-            
+          <div className="max-w-3xl mx-auto">
             <div className="bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-blue-500/30">
               <h3 className="text-2xl font-semibold text-white mb-4">Who I Am</h3>
               <p className="text-blue-100 mb-6">
