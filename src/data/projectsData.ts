@@ -26,7 +26,8 @@ const projectsData: ProjectProps[] = [
     imageUrl: "/lovable-uploads/98b426d6-0600-4c33-afce-c118244687d2.png",
     heading: "Code Creator",
     liveUrl: "https://www.appsheet.com/start/a4cf12a8-ae60-48b8-b3be-6e40de2053a9?platform=desktop#appName=CollaboratesApp-509564924&vss=H4sIAAAAAAAAA6WOMQ7CMBAE_7K1X-AWUSAEDRENpjDxWbKS2FHsAJHlv3MJIOqI8uY0u5txd_Q4JV03kJf8u_Y0QSIrVFNPClJhE3waQqsgFI66e8NKxyYqFJSr-MqJImRe4co_egWcIZ-cdTTMQbPGAR-J37PCYBFQBLox6VtLy04WSmFmQz1GMmcesbY87vz22WtvDsFwntVtpPICy9uR0FYBAAA=&view=Tasks",
-    githubUrl: "#"
+    githubUrl: "#",
+    showLinkText: true
   },
   {
     title: "Weather Dashboard",

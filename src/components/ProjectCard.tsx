@@ -13,6 +13,7 @@ export interface ProjectProps {
   githubUrl?: string;
   heading?: string;
   cloudContent?: boolean;
+  showLinkText?: boolean;
 }
 
 const ProjectCard = ({ 
@@ -23,6 +24,7 @@ const ProjectCard = ({
   liveUrl, 
   githubUrl, 
   heading,
+  showLinkText,
   children
 }: ProjectProps & { children?: React.ReactNode }) => {
   return (
@@ -54,6 +56,15 @@ const ProjectCard = ({
       
       <CardContent className="flex-grow">
         <p className="text-portfolio-lightBlue mb-4">{description}</p>
+        
+        {showLinkText && liveUrl && (
+          <p className="text-sm text-portfolio-blue mb-4">
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-portfolio-accent">
+              {liveUrl}
+            </a>
+          </p>
+        )}
+        
         <div className="flex flex-wrap gap-2 mt-4">
           {tags.map((tag) => (
             <span 
