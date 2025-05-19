@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -21,6 +23,9 @@ const Footer = () => {
             <a href="#projects" className="text-portfolio-light hover:text-white transition-colors">
               Projects
             </a>
+            <Link to="/social-networks" className="text-portfolio-light hover:text-white transition-colors">
+              Social Networks
+            </Link>
             <a href="#contact" className="text-portfolio-light hover:text-white transition-colors">
               Contact
             </a>

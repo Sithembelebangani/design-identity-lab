@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '#home', path: '/' },
+    { name: 'About', href: '#about', path: '/' },
+    { name: 'Projects', href: '#projects', path: '/' },
+    { name: 'Social Networks', href: '', path: '/social-networks' },
+    { name: 'Contact', href: '#contact', path: '/' }
   ];
 
   return (
@@ -32,20 +34,30 @@ const Header = () => {
       isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#home" className="text-2xl font-bold text-portfolio-blue">
+        <Link to="/" className="text-2xl font-bold text-portfolio-blue">
           Portfolio
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium"
-            >
-              {link.name}
-            </a>
+            link.path === '/' ? (
+              <a 
+                key={link.name} 
+                href={link.href}
+                className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link 
+                key={link.name}
+                to={link.path}
+                className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -75,14 +87,25 @@ const Header = () => {
         <nav className="md:hidden bg-white/90 backdrop-blur-sm p-4 border-t border-gray-100">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.path === '/' ? (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-portfolio-blue hover:text-portfolio-accent transition-colors font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         </nav>
