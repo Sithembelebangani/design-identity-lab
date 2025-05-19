@@ -65,7 +65,7 @@ const SocialNetworks = () => {
       color: "bg-blue-700",
       description: "Connect with professionals, find job opportunities, and build your career.",
       users: "875 million total users",
-      url: "https://linkedin.com"
+      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/?trk=PROFILE_TOP_CARD_OPEN_TO_ENROLLED"
     },
     {
       name: "YouTube",
