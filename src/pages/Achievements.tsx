@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Linkedin, Medal, Trophy } from "lucide-react";
+import { Award, Cloud, Linkedin, Medal, Trophy } from "lucide-react";
 import { useEffect } from "react";
 
 const Achievements = () => {
@@ -44,12 +44,13 @@ const Achievements = () => {
       url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/"
     },
     {
-      name: "Innovation Excellence",
-      icon: Award,
+      name: "Google Cloud Certificate",
+      icon: Cloud,
       color: "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500",
-      description: "Recognized for creating groundbreaking solutions that pushed the boundaries of technology.",
-      year: "2022",
-      url: "https://example.com/innovation"
+      description: "Successfully completed 'Developing Applications with Google Cloud: Foundations' course offered through Coursera.",
+      year: "2023",
+      url: "https://coursera.org/verify/NM0H74SSO1S2",
+      image: "/lovable-uploads/d950da79-45a9-4d1e-8b11-a79191c8f3cf.png"
     },
     {
       name: "Project Leadership",
@@ -65,7 +66,7 @@ const Achievements = () => {
       color: "bg-indigo-700",
       description: "Selected as one of the top professionals in the technology industry.",
       year: "2021",
-      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/?trk=PROFILE_TOP_CARD_OPEN_TO_ENROLLED"
+      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/"
     },
     {
       name: "Technical Excellence",
@@ -105,17 +106,30 @@ const Achievements = () => {
                   <CardTitle>{achievement.name}</CardTitle>
                 </div>
                 <CardDescription className="text-sm text-portfolio-lightBlue mt-2">
-                  {achievement.name === "LinkedIn Profile" ? "Professional Profile" : `Awarded in ${achievement.year}`}
+                  {achievement.name === "LinkedIn Profile" ? "Professional Profile" : 
+                   achievement.name === "Google Cloud Certificate" ? "Apr 2023" : 
+                   `Awarded in ${achievement.year}`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                {achievement.image && (
+                  <div className="mb-4 border rounded-md overflow-hidden">
+                    <img 
+                      src={achievement.image} 
+                      alt={`${achievement.name} Certificate`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                )}
                 <p className="text-portfolio-lightBlue mb-4">{achievement.description}</p>
                 <Button 
                   variant="outline"
                   className="w-full border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
                   onClick={() => window.open(achievement.url, '_blank', 'noopener,noreferrer')}
                 >
-                  {achievement.name === "LinkedIn Profile" ? "View Profile" : "View Certificate"}
+                  {achievement.name === "LinkedIn Profile" ? "View Profile" : 
+                   achievement.name === "Google Cloud Certificate" ? "Verify Certificate" : 
+                   "View Certificate"}
                 </Button>
               </CardContent>
             </Card>
