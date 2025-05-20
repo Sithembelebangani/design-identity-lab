@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Medal, Trophy } from "lucide-react";
+import { Award, Linkedin, Medal, Trophy } from "lucide-react";
 import { useEffect } from "react";
 
 const Achievements = () => {
@@ -36,12 +36,12 @@ const Achievements = () => {
 
   const achievements = [
     {
-      name: "Best Developer Award",
-      icon: Trophy,
-      color: "bg-amber-600",
-      description: "Awarded for exceptional development skills and contribution to innovative projects.",
+      name: "LinkedIn Profile",
+      icon: Linkedin,
+      color: "bg-blue-600",
+      description: "Connect with me on LinkedIn to see my professional experience, skills, and recommendations.",
       year: "2023",
-      url: "https://example.com/awards/developer"
+      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/?trk=PROFILE_TOP_CARD_OPEN_TO_ENROLLED"
     },
     {
       name: "Innovation Excellence",
@@ -105,7 +105,7 @@ const Achievements = () => {
                   <CardTitle>{achievement.name}</CardTitle>
                 </div>
                 <CardDescription className="text-sm text-portfolio-lightBlue mt-2">
-                  Awarded in {achievement.year}
+                  {achievement.name === "LinkedIn Profile" ? "Professional Profile" : `Awarded in ${achievement.year}`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -115,7 +115,7 @@ const Achievements = () => {
                   className="w-full border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
                   onClick={() => window.open(achievement.url, '_blank', 'noopener,noreferrer')}
                 >
-                  View Certificate
+                  {achievement.name === "LinkedIn Profile" ? "View Profile" : "View Certificate"}
                 </Button>
               </CardContent>
             </Card>
