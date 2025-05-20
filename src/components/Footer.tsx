@@ -23,8 +23,8 @@ const Footer = () => {
             <a href="#projects" className="text-portfolio-light hover:text-white transition-colors">
               Projects
             </a>
-            <Link to="/social-networks" className="text-portfolio-light hover:text-white transition-colors">
-              Social Networks
+            <Link to="/achievements" className="text-portfolio-light hover:text-white transition-colors">
+              Achievements
             </Link>
             <a href="#contact" className="text-portfolio-light hover:text-white transition-colors">
               Contact
