@@ -1,10 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Cloud, Linkedin, Medal, Trophy } from "lucide-react";
-import { useEffect } from "react";
+import { Award, Cloud, Fullscreen, Linkedin, Medal, Trophy } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Achievements = () => {
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  
   useEffect(() => {
     // Initialize animation observers for fade-in effects
     const animateOnScroll = () => {
@@ -34,6 +36,27 @@ const Achievements = () => {
     };
   }, []);
 
+  // Handle fullscreen viewing of certificate
+  const toggleFullScreen = (imageSrc: string) => {
+    if (!isFullScreen) {
+      const fullScreenView = document.createElement('div');
+      fullScreenView.id = 'certificate-fullscreen';
+      fullScreenView.className = 'fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center';
+      fullScreenView.onclick = () => {
+        document.body.removeChild(fullScreenView);
+        setIsFullScreen(false);
+      };
+      
+      const image = document.createElement('img');
+      image.src = imageSrc;
+      image.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+      
+      fullScreenView.appendChild(image);
+      document.body.appendChild(fullScreenView);
+      setIsFullScreen(true);
+    }
+  };
+
   const achievements = [
     {
       name: "LinkedIn Profile",
@@ -49,7 +72,6 @@ const Achievements = () => {
       color: "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500",
       description: "Successfully completed 'Developing Applications with Google Cloud: Foundations' course offered through Coursera.",
       year: "2023",
-      url: "https://coursera.org/verify/NM0H74SSO1S2",
       image: "/lovable-uploads/d950da79-45a9-4d1e-8b11-a79191c8f3cf.png"
     },
     {
@@ -113,7 +135,7 @@ const Achievements = () => {
               </CardHeader>
               <CardContent>
                 {achievement.image && (
-                  <div className="mb-4 border rounded-md overflow-hidden">
+                  <div className="mb-4 border rounded-md overflow-hidden cursor-pointer" onClick={() => toggleFullScreen(achievement.image!)}>
                     <img 
                       src={achievement.image} 
                       alt={`${achievement.name} Certificate`}
@@ -122,15 +144,23 @@ const Achievements = () => {
                   </div>
                 )}
                 <p className="text-portfolio-lightBlue mb-4">{achievement.description}</p>
-                <Button 
-                  variant="outline"
-                  className="w-full border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
-                  onClick={() => window.open(achievement.url, '_blank', 'noopener,noreferrer')}
-                >
-                  {achievement.name === "LinkedIn Profile" ? "View Profile" : 
-                   achievement.name === "Google Cloud Certificate" ? "Verify Certificate" : 
-                   "View Certificate"}
-                </Button>
+                {achievement.name === "Google Cloud Certificate" ? (
+                  <Button 
+                    variant="outline"
+                    className="w-full border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
+                    onClick={() => toggleFullScreen(achievement.image!)}
+                  >
+                    <Fullscreen size={16} className="mr-2" /> Full Screen
+                  </Button>
+                ) : achievement.url && (
+                  <Button 
+                    variant="outline"
+                    className="w-full border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
+                    onClick={() => window.open(achievement.url, '_blank', 'noopener,noreferrer')}
+                  >
+                    {achievement.name === "LinkedIn Profile" ? "View Profile" : "View Certificate"}
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
