@@ -41,7 +41,7 @@ const Achievements = () => {
       color: "bg-blue-600",
       description: "Connect with me on LinkedIn to see my professional experience, skills, and recommendations.",
       year: "2023",
-      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/?trk=PROFILE_TOP_CARD_OPEN_TO_ENROLLED"
+      url: "https://www.linkedin.com/in/sithembele-bangani-2323a3300/"
     },
     {
       name: "Innovation Excellence",
