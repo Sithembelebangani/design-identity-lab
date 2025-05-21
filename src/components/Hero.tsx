@@ -21,7 +21,7 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
       
       <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow">
