@@ -24,10 +24,10 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
       
       <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold text-pink-300 mb-6 text-shadow">
-          Hello, I'm <span className="text-pink-400">Sithembele Bangani </span>
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow">
+          Hello, I'm <span className="text-blue-400">Sithembele Bangani</span>
         </h1>
-        <p className="text-xl md:text-2xl text-pink-200 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
           I'm a Business Analyst & Cloud Associate creating modern digital solutions.
         </p>
         
@@ -35,7 +35,7 @@ const Hero = () => {
           <Button 
             onClick={() => scrollToSection('projects')}
             size="lg"
-            className="bg-pink-600 hover:bg-pink-700 text-white"
+            className="bg-blue-600 hover:bg-blue-700 text-white"
           >
             View My Work
           </Button>
@@ -43,7 +43,7 @@ const Hero = () => {
             onClick={() => scrollToSection('contact')}
             size="lg"
             variant="outline"
-            className="border-pink-400 text-pink-300 hover:bg-pink-500/10"
+            className="border-white text-white hover:bg-white/10"
           >
             Contact Me
           </Button>
@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-8 animate-bounce cursor-pointer z-10" onClick={() => scrollToSection('about')}>
-        <ArrowDown size={32} className="text-pink-300" />
+        <ArrowDown size={32} className="text-white" />
       </div>
     </section>
   );
