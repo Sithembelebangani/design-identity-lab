@@ -25,7 +25,7 @@ const Hero = () => {
       
       <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold text-pink-300 mb-6 text-shadow">
-          Hello, I'm <span className="text-pink-400">Sithembele Bangani </span>
+          Hello, I'm <span className="text-pink-400">Sithembele Bangani 12</span>
         </h1>
         <p className="text-xl md:text-2xl text-pink-200 mb-8 max-w-2xl mx-auto">
           I'm a Business Analyst & Cloud Associate creating modern digital solutions.
