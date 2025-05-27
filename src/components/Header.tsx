@@ -45,7 +45,7 @@ const Header = () => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-portfolio-pink hover:text-portfolio-accent transition-colors font-medium"
+                className="text-portfolio-green hover:text-portfolio-accent transition-colors font-medium"
               >
                 {link.name}
               </a>
@@ -84,7 +84,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white/90 backdrop-blur-sm p-4 border-t border-gray-100">
+        <nav className="md:hidden bg-green/90 backdrop-blur-sm p-4 border-t border-gray-100">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               link.path === '/' ? (
