@@ -21,40 +21,20 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Top-right profile image with 2.5cm (~95px) radius */}
+      <div className="absolute top-4 right-4 w-[95px] h-[95px] rounded-full overflow-hidden border-2 border-green-400 z-20">
+        <img
+          src="/lovable-uploads/JDKF2211-Enhanced-NR%20(1).JPG"
+          alt="Sithembele Bangani"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
       
+      {/* Main content */}
       <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold text-green-300 mb-6 text-shadow">
           Hello, I'm <span className="text-green-400">Sithembele Bangani</span>
         </h1>
-        <p className="text-xl md:text-2xl text-green-200 mb-8 max-w-2xl mx-auto">
-          I'm a Business Analyst & Cloud Associate creating modern digital solutions.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-          <Button 
-            onClick={() => scrollToSection('projects')}
-            size="lg"
-            className="bg-green-600 hover:bg-green-700 text-green"
-          >
-            View My Work
-          </Button>
-          <Button 
-            onClick={() => scrollToSection('contact')}
-            size="lg"
-            variant="outline"
-            className="border-black-400 text-pink-300 hover:bg-yellow-500/10"
-          >
-            Contact Me
-          </Button>
-        </div>
-      </div>
-      
-      <div className="absolute bottom-8 animate-bounce cursor-pointer z-10" onClick={() => scrollToSection('about')}>
-        <ArrowDown size={32} className="text-green-300" />
-      </div>
-    </section>
-  );
-};
-
-export default Hero;
