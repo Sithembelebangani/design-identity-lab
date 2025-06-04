@@ -32,46 +32,46 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-portfolio-blue">
       <div className="container mx-auto px-4">
         <div className="opacity-0 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-portfolio-green mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
             Get In Touch
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold text-portfolio-green mb-6">
+            <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-semibold text-white mb-6">
                 Contact Information
               </h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <Mail className="text-portfolio-accent" />
+                  <Mail className="text-green-300" />
                   <div>
-                    <h4 className="text-sm font-medium text-green-500">Email</h4>
-                    <p className="text-portfolio-blue">banganisithembele1307@gmail.com</p>
+                    <h4 className="text-sm font-medium text-green-300">Email</h4>
+                    <p className="text-white">banganisithembele1307@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Phone className="text-portfolio-accent" />
+                  <Phone className="text-green-300" />
                   <div>
-                    <h4 className="text-sm font-medium text-green-500">Phone</h4>
-                    <p className="text-portfolio-green">0734382698</p>
+                    <h4 className="text-sm font-medium text-green-300">Phone</h4>
+                    <p className="text-white">0734382698</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <MapPin className="text-portfolio-accent" />
+                  <MapPin className="text-green-300" />
                   <div>
-                    <h4 className="text-sm font-medium text-green-500">Location</h4>
-                    <p className="text-portfolio-green">Saltrive Cape Town, South Africa</p>
+                    <h4 className="text-sm font-medium text-green-300">Location</h4>
+                    <p className="text-white">Saltrive Cape Town, South Africa</p>
                   </div>
                 </div>
               </div>
               
-              <hr className="my-8 border-gray-200" />
+              <hr className="my-8 border-white/20" />
               
-              <h3 className="text-lg font-semibold text-portfolio-green mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
                 Follow Me
               </h3>
               <div className="flex gap-4">
@@ -80,7 +80,7 @@ const Contact = () => {
                   <a 
                     key={social}
                     href="#" 
-                    className="bg-green p-2 rounded-full text-portfolio-green hover:text-portfolio-accent transition-colors"
+                    className="bg-white/10 p-2 rounded-full text-white hover:text-green-300 transition-colors"
                   >
                     <span className="sr-only">{social}</span>
                     <div className="w-6 h-6 flex items-center justify-center">
@@ -102,7 +102,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="border-green-300 focus-visible:ring-portfolio-accent"
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-green-300"
                   />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="border-green-300 focus-visible:ring-portfolio-accent"
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-green-300"
                   />
                 </div>
                 <div>
@@ -123,7 +123,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="border-green-300 focus-visible:ring-portfolio-accent"
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-green-300"
                   />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="min-h-[150px] border-green-300 focus-visible:ring-portfolio-accent"
+                    className="min-h-[150px] bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-green-300"
                   />
                 </div>
                 <Button 
