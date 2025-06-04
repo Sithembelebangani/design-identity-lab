@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
@@ -14,6 +13,7 @@ export interface ProjectProps {
   heading?: string;
   cloudContent?: boolean;
   showLinkText?: boolean;
+  linkText?: string;
 }
 
 const ProjectCard = ({ 
@@ -25,6 +25,7 @@ const ProjectCard = ({
   githubUrl, 
   heading,
   showLinkText,
+  linkText,
   children
 }: ProjectProps & { children?: React.ReactNode }) => {
   return (
@@ -88,7 +89,7 @@ const ProjectCard = ({
             onClick={() => window.open(liveUrl, '_blank')}
           >
             <ExternalLink size={16} />
-            Live Demo
+            {linkText || 'Live Demo'}
           </Button>
         )}
         {githubUrl && (
