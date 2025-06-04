@@ -23,30 +23,41 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
       
-      <div className="container mx-auto max-w-4xl text-center relative z-10 opacity-0 animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold text-green-300 mb-6 text-shadow">
-          Hello, I'm <span className="text-green-400">Sithembele Bangani</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-green-200 mb-8 max-w-2xl mx-auto">
-          I'm a Business Analyst & Cloud Associate creating modern digital solutions.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-          <Button 
-            onClick={() => scrollToSection('projects')}
-            size="lg"
-            className="bg-green-600 hover:bg-green-700 text-green"
-          >
-            View My Work
-          </Button>
-          <Button 
-            onClick={() => scrollToSection('contact')}
-            size="lg"
-            variant="outline"
-            className="border-green-400 text-pink-300 hover:bg-green-500/10"
-          >
-            Contact Me
-          </Button>
+      <div className="container mx-auto max-w-6xl relative z-10 opacity-0 animate-fade-in">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Text Content - Left Side */}
+          <div className="text-left space-y-6">
+            <p className="text-xl md:text-2xl text-green-200 leading-relaxed">
+              Hello, I'm Sithembele Bangani. I am a Business Analyst and Cloud Associate creating modern digital solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button 
+                onClick={() => scrollToSection('projects')}
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white"
+              >
+                View My Work
+              </Button>
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                size="lg"
+                variant="outline"
+                className="border-green-400 text-green-300 hover:bg-green-500/10"
+              >
+                Contact Me
+              </Button>
+            </div>
+          </div>
+
+          {/* Image - Right Side */}
+          <div className="flex justify-center lg:justify-end">
+            <img 
+              src="/lovable-uploads/6304ebf6-b28d-498d-9c07-b8e46c7440f1.png"
+              alt="Sithembele Bangani"
+              className="w-80 h-80 object-cover rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </div>
       
