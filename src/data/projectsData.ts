@@ -4,7 +4,7 @@ import { ProjectProps } from '@/components/ProjectCard';
 const projectsData: ProjectProps[] = [
   {
     title: "E-commerce Website",
-    description: "When I was doing my studies at Walter Sisulu University, we were once given a project to go to small and medium businesses to ask about their business and ask if we can help them to create an online platform so that their business can grow and accommodate different target groups. Our website was created using WordPress. Anyone who visited our webpage could see the things that we were selling, the price, and be able to buy online using different payment methods with free delivery if the customer is less than 10km.",
+    description: "A comprehensive e-commerce platform built during university studies to help small and medium businesses establish an online presence with integrated payment systems and delivery services.",
     tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     imageUrl: "/lovable-uploads/1a207bed-0d20-42ac-9762-b22688008ffa.png",
     liveUrl: "#",
@@ -21,7 +21,7 @@ const projectsData: ProjectProps[] = [
   },
   {
     title: "Task Management App",
-    description: "This management app is designed to enhance group collaboration and performance tracking by organizing tasks into three clear stages: \"Not Started,\" \"In Progress,\" and \"Complete.\" Each member's progress is monitored through these steps, making it easy for the team to stay aligned and productive. The app also features visual graphs that display overall and individual progress, offering a clear overview of how the group is advancing toward its goals. Additionally, it includes a built-in communication tool that allows the group leader to contact members directly via email through a dedicated button, streamlining coordination and updates.",
+    description: "A collaborative task management application with three-stage workflow tracking, progress visualization, and integrated team communication features for enhanced productivity.",
     tags: ["React", "TypeScript", "Firebase"],
     imageUrl: "/lovable-uploads/98b426d6-0600-4c33-afce-c118244687d2.png",
     heading: "Code Creator",
