@@ -14,6 +14,7 @@ export interface ProjectProps {
   cloudContent?: boolean;
   showLinkText?: boolean;
   linkText?: string;
+  portfolioButton?: boolean;
 }
 
 const ProjectCard = ({ 
@@ -26,6 +27,7 @@ const ProjectCard = ({
   heading,
   showLinkText,
   linkText,
+  portfolioButton,
   children
 }: ProjectProps & { children?: React.ReactNode }) => {
   return (
@@ -100,7 +102,7 @@ const ProjectCard = ({
             onClick={() => window.open(githubUrl, '_blank')}
           >
             <Github size={16} />
-            Code
+            {portfolioButton ? 'Portfolio' : 'Code'}
           </Button>
         )}
       </CardFooter>

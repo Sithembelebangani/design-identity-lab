@@ -15,8 +15,9 @@ const projectsData: ProjectProps[] = [
     tags: ["React", "Tailwind CSS", "Cloud Services"],
     imageUrl: "/lovable-uploads/4f46a399-12a8-4a4c-ba54-970eb9a4facf.png",
     liveUrl: "#",
-    githubUrl: "#",
-    cloudContent: true
+    githubUrl: "https://lovable.dev/projects/ef36bfe9-6e69-4419-8fea-319d609e444f",
+    cloudContent: true,
+    portfolioButton: true
   },
   {
     title: "Task Management App",
