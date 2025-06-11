@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Content - Left Side */}
           <div className="text-left space-y-6">
-            <p className="text-xl md:text-2xl text-green-200 leading-relaxed">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-green-200 leading-relaxed">
               Hello, I'm Sithembele Bangani. I am a Business Analyst and Cloud Associate creating modern digital solutions.
             </p>
             
