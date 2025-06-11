@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -64,7 +63,7 @@ const Contact = () => {
                   <MapPin className="text-green-300" />
                   <div>
                     <h4 className="text-sm font-medium text-green-300">Location</h4>
-                    <p className="text-white">Saltrive Cape Town, South Africa</p>
+                    <p className="text-white">Salt River Cape Town, South Africa</p>
                   </div>
                 </div>
               </div>

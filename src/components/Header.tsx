@@ -33,7 +33,7 @@ const Header = () => {
       isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-portfolio-green">
+        <Link to="/" className="text-2xl font-bold text-blue-600">
           Portfolio
         </Link>
 
@@ -44,7 +44,7 @@ const Header = () => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-portfolio-green hover:text-portfolio-accent transition-colors font-medium"
+                className="text-blue-600 hover:text-blue-800 transition-colors font-bold"
               >
                 {link.name}
               </a>
@@ -52,7 +52,7 @@ const Header = () => {
               <Link 
                 key={link.name}
                 to={link.path}
-                className="text-portfolio-green hover:text-portfolio-accent transition-colors font-medium"
+                className="text-blue-600 hover:text-blue-800 transition-colors font-bold"
               >
                 {link.name}
               </Link>
@@ -62,7 +62,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-portfolio-green"
+          className="md:hidden text-blue-600"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -90,7 +90,7 @@ const Header = () => {
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className="text-portfolio-green hover:text-portfolio-accent transition-colors font-medium py-2"
+                  className="text-blue-600 hover:text-blue-800 transition-colors font-bold py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -99,7 +99,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-portfolio-green hover:text-portfolio-accent transition-colors font-medium py-2"
+                  className="text-blue-600 hover:text-blue-800 transition-colors font-bold py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
