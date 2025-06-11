@@ -14,10 +14,11 @@ const projectsData: ProjectProps[] = [
     description: "A comprehensive showcase for a Business Analyst and Cloud Associate professional with expertise in cloud computing solutions.",
     tags: ["React", "Tailwind CSS", "Cloud Services"],
     imageUrl: "/lovable-uploads/4f46a399-12a8-4a4c-ba54-970eb9a4facf.png",
-    liveUrl: "#",
+    liveUrl: "/lovable-uploads/3a544af9-19c0-40fc-a205-50aa6f54faf7.png",
     githubUrl: "https://lovable.dev/projects/ef36bfe9-6e69-4419-8fea-319d609e444f",
     cloudContent: true,
-    portfolioButton: true
+    portfolioButton: true,
+    linkText: "CV"
   },
   {
     title: "Task Management App",
