@@ -1,9 +1,11 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { LinkedinIcon, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -28,6 +30,18 @@ const Contact = () => {
     });
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
+  };
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "0734382698";
+    const message = "Hi Sithembele, I'd like to connect with you!";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleLinkedInClick = () => {
+    const linkedinUrl = "https://www.linkedin.com/in/sithembele-bangani-2323a3300/";
+    window.open(linkedinUrl, '_blank');
   };
 
   return (
@@ -74,20 +88,20 @@ const Contact = () => {
                 Follow Me
               </h3>
               <div className="flex gap-4">
-                {/* Social Icons */}
-                {['github', 'twitter', 'linkedin', 'dribbble'].map((social) => (
-                  <a 
-                    key={social}
-                    href="#" 
-                    className="bg-white/10 p-2 rounded-full text-white hover:text-green-300 transition-colors"
-                  >
-                    <span className="sr-only">{social}</span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      {/* Placeholder for social icon */}
-                      <div className="w-5 h-5 rounded-full bg-green-200" />
-                    </div>
-                  </a>
-                ))}
+                <button 
+                  onClick={handleWhatsAppClick}
+                  className="bg-white/10 p-2 rounded-full text-white hover:text-green-300 transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle size={24} />
+                </button>
+                <button 
+                  onClick={handleLinkedInClick}
+                  className="bg-white/10 p-2 rounded-full text-white hover:text-green-300 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinIcon size={24} />
+                </button>
               </div>
             </div>
             
