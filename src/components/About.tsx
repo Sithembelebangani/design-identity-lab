@@ -33,9 +33,9 @@ const About = () => {
           
           <div className="max-w-3xl mx-auto">
             <div className="bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-green-500/30">
-              <h3 className="text-2xl font-semibold text-green mb-4">Who I Am</h3>
+              <h3 className="text-2xl font-semibold text-green mb-4">Business Analyst | Cloud Computing Enthusiast | Data-Driven Decision Maker</h3>
               <p className="text-blue-100 mb-6">
-                My name is Sithembele Bangani, I have a diploma in Business Application and looking forward to engage with an upgraded technologies to enhance my skills and knowledge.
+                I am a results-oriented Business Analyst with a strong foundation in cloud computing services such as AWS, Azure, and Google Cloud Platform. With a keen ability to bridge the gap between technical teams and business stakeholders, I specialize in gathering and translating requirements into scalable cloud-based solutions.
               </p>
               
               <p className="text-green-100 mb-8">
