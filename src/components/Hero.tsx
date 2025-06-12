@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Text Content - Left Side */}
           <div className="text-left space-y-6">
             <p className="text-2xl md:text-3xl lg:text-4xl text-green-200 leading-relaxed">
-              Hello, I'm Sithembele Bangani. I am a Business Analyst and Cloud Associate creating modern digital solutions.
+              Hello, I'm Sithembele Bangani. I am a Business Analyst and Cloud Associate creating modern digital solutions. I have a diploma in Business Application and willing to grow both in technical and business side.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
