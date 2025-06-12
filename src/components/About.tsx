@@ -38,8 +38,7 @@ const About = () => {
                 I am a results-oriented Business Analyst with a strong foundation in cloud computing services such as AWS, Azure, and Google Cloud Platform. With a keen ability to bridge the gap between technical teams and business stakeholders, I specialize in gathering and translating requirements into scalable cloud-based solutions.
               </p>
               
-              <p className="text-green-100 mb-8">
-                I am currently doing learnership at Capaciti as Cloud Associate and I can assure you that I have gained lot experiences in technical side as well as personal side. I am now ready to take on or kick start my career.
+              <p className="text-green-100 mb-8">                I am currently doing learnership at Capaciti as Cloud Associate and I have gained lot of experiences, technical and personal. When I came here I was only focusing on business side ,not so much on the technical side but now I am growing everyday.
               </p>
               
               <h3 className="text-2xl font-semibold text-green mb-4">My Skills</h3>
