@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { LinkedinIcon, MessageCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import WhatsAppPasswordDialog from './WhatsAppPasswordDialog';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -16,6 +17,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showWhatsAppDialog, setShowWhatsAppDialog] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -60,6 +62,10 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
+    setShowWhatsAppDialog(true);
+  };
+
+  const handleWhatsAppAccess = () => {
     const phoneNumber = "0734382698";
     const message = "Hi Sithembele, I'd like to connect with you!";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -193,6 +199,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <WhatsAppPasswordDialog
+        isOpen={showWhatsAppDialog}
+        onClose={() => setShowWhatsAppDialog(false)}
+        onSuccess={handleWhatsAppAccess}
+      />
     </section>
   );
 };
