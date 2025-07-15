@@ -65,9 +65,9 @@ const Contact = () => {
     setShowWhatsAppDialog(true);
   };
 
-  const handleWhatsAppAccess = () => {
+  const handleWhatsAppAccess = (visitorNumber: string) => {
     const phoneNumber = "0734382698";
-    const message = "Hi Sithembele, I'd like to connect with you!";
+    const message = `Hi Sithembele, I'd like to connect with you! My number is: ${visitorNumber}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
