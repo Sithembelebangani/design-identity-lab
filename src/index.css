@@ -33,6 +33,14 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Hero gradient colors */
+    --hero-gradient-start: 240 100% 20%;
+    --hero-gradient-end: 260 100% 40%;
+    
+    /* Enhanced shadows */
+    --shadow-elegant: 0 20px 40px -12px hsl(var(--hero-gradient-start) / 0.3);
+    --shadow-soft: 0 8px 25px -8px hsl(0 0% 0% / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
