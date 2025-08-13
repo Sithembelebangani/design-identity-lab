@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { LinkedinIcon, MessageCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
@@ -72,6 +72,11 @@ const Contact = () => {
     window.open(linkedinUrl, '_blank');
   };
 
+  const handleGitHubClick = () => {
+    const githubUrl = "https://github.com/Sithembelebangani";
+    window.open(githubUrl, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-portfolio-blue">
       <div className="container mx-auto px-4">
@@ -129,6 +134,13 @@ const Contact = () => {
                   aria-label="LinkedIn"
                 >
                   <LinkedinIcon size={24} />
+                </button>
+                <button 
+                  onClick={handleGitHubClick}
+                  className="bg-white/10 p-2 rounded-full text-white hover:text-green-300 transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github size={24} />
                 </button>
               </div>
             </div>
