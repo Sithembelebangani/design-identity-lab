@@ -61,8 +61,8 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "0734382698";
-    const message = "Hi Sithembele, I'd like to connect with you! Please use the contact form on your website to send me your details.";
+    const phoneNumber = "27734382698"; // South African number with country code
+    const message = "Hi Sithembele, I'd like to connect with you!";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
