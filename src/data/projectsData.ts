@@ -48,6 +48,15 @@ const projectsData: ProjectProps[] = [
     githubUrl: "#"
   },
   {
+    title: "Phone Tracking System",
+    description: "A safety-focused mobile tracking application that helps monitor loved ones when they're in potentially dangerous locations. Features real-time GPS tracking, safety alerts, and emergency notifications.",
+    tags: ["React", "GPS Tracking", "Real-time Updates", "Safety"],
+    imageUrl: "/phone-tracking-app.jpg",
+    liveUrl: "https://lovable.dev/projects/7b373e18-8ef3-41b2-948c-f52763c53360",
+    githubUrl: "#",
+    linkText: "View App"
+  },
+  {
     title: "Social Media Dashboard",
     description: "A comprehensive dashboard for social media analytics with customizable widgets and data visualization.",
     tags: ["React", "Redux", "D3.js"],
