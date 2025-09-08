@@ -30,10 +30,10 @@ const Header = () => {
   return (
     <header className={cn(
       'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-      isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-[var(--shadow-soft)]' : 'bg-background/80 backdrop-blur-sm'
     )}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-blue-600">
+        <Link to="/" className="text-2xl font-bold text-primary hover:text-secondary transition-colors">
           Portfolio
         </Link>
 
@@ -44,7 +44,7 @@ const Header = () => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-blue-600 hover:text-blue-800 transition-colors font-bold"
+                className="text-primary hover:text-secondary transition-colors font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
               </a>
@@ -52,7 +52,7 @@ const Header = () => {
               <Link 
                 key={link.name}
                 to={link.path}
-                className="text-blue-600 hover:text-blue-800 transition-colors font-bold"
+                className="text-primary hover:text-secondary transition-colors font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
               </Link>
@@ -62,7 +62,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-blue-600"
+          className="md:hidden text-primary hover:text-secondary transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -83,14 +83,14 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-green/90 backdrop-blur-sm p-4 border-t border-gray-100">
+        <nav className="md:hidden bg-background/95 backdrop-blur-md p-4 border-t border-border shadow-[var(--shadow-soft)]">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               link.path === '/' ? (
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className="text-blue-600 hover:text-blue-800 transition-colors font-bold py-2"
+                  className="text-primary hover:text-secondary transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -99,7 +99,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-blue-600 hover:text-blue-800 transition-colors font-bold py-2"
+                  className="text-primary hover:text-secondary transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
